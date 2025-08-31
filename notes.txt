@@ -1,0 +1,40 @@
+To Do:
+- create routes
+- create components
+- create flexible styling (colors, weights and fonts)
+- website console to simulate university projects
+- full stack with Postgres, Nextjs, React and Figma
+- make use of SSR to protect website from web scraping
+
+[Pages]
+- Auth Page
+
+- Dashboard (About me)
+  - Intro
+  - Tech stack
+  - Page Headings
+
+- Additional Projects (in future)
+
+- Career
+  - Avochoc
+    - list Avochoc projects
+
+- Education
+  - Courses
+  - University
+      - Marks (table)
+      - projects + link to command line programs
+  - Matric Marks (table)
+
+- cmd (description + implementation)
+
+- Summary (download)
+
+Matrix Component:
+- main thread - (determine's new rain trail)
+- rain thread
+  - determine new letter
+  - determine if new letter flickers
+  - disappear old letter
+- flicker thread
