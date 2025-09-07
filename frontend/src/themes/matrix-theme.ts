@@ -1,10 +1,11 @@
 import type { ThemeConfig } from './theme'
 
 export const matrixTheme: ThemeConfig = {
-  font: {
+  fontFamily: {
     heading: "IBM Plex Mono, monospace",
     body: "IBM Plex Mono, monospace",
   },
+  fontWeight: 400,
   bodySize: 1,
   typeScale: 1.333,
   color: {
@@ -13,10 +14,15 @@ export const matrixTheme: ThemeConfig = {
       saturation: 76,
       lightness: 5,
     },
-    background: {
+    background1: {
       hue: 240,
       saturation: 60,
       lightness: 99,
+    },
+    background2: {
+      hue: 240,
+      saturation: 1,
+      lightness: 71,
     },
     primary: {
       hue: 145,

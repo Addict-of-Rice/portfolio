@@ -9,10 +9,17 @@ To Do:
 [Pages]
 - Auth Page
 
-- Dashboard (About me)
-  - Intro
-  - Tech stack
-  - Page Headings
+- Home (About me)
+  - Navbar
+  - Highlights
+  - About me
+    - Description
+    - Contacts
+    - Tech Stack
+  - Projects
+  - Career
+  - Education
+  - Footer
 
 - Additional Projects (in future)
 

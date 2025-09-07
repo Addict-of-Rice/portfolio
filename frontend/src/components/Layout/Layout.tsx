@@ -1,21 +1,31 @@
 import type { FC } from 'react';
 import { Outlet } from 'react-router';
 import { useThemeContext } from '../../providers/ThemeProvider';
+import Column from '../Structure/Column';
+import Header from './Header';
+import Footer from './Footer';
 
 const Layout: FC = () => {
   const { theme } = useThemeContext();
 
   return (
-    <div
+    <Column
       style={{
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: theme.color.background,
+        justifyContent: 'space-between',
+        backgroundColor: theme.color.background1,
         minHeight: '100vh',
+        minWidth: '100vw'
       }}
     >
-      <Outlet />
-    </div>
+      <Column>
+        <Header />
+        <Outlet />
+      </Column>
+
+      <Footer />
+    </Column>
   );
 };
 

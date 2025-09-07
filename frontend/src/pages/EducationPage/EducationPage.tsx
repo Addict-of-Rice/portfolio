@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 
-const Education: FC = () => {
+const EducationPage: FC = () => {
   return (
     <div>
       Education
@@ -8,4 +8,4 @@ const Education: FC = () => {
   )
 };
 
-export default Education;
+export default EducationPage;

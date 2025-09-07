@@ -5,9 +5,11 @@ import type { Theme } from '../../themes/theme';
 type Variant = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'small' | 'tiny';
 
 type Props = {
+  className?: string;
   children: ReactNode;
   variant?: Variant;
   style?: CSSProperties;
+  onClick?: () => void;
 };
 
 const variantMap: Record<
@@ -29,20 +31,26 @@ const variantMap: Record<
   tiny: { tag: 'p', fontFamilyKey: 'body', fontSizeKey: 'tiny' },
 };
 
-const Typography: FC<Props> = ({ children, variant = 'p', style }) => {
+const Typography: FC<Props> = ({ className, children, variant = 'p', style, onClick }) => {
   const { theme } = useThemeContext();
   const { tag: Tag, fontFamilyKey, fontSizeKey } = variantMap[variant];
 
   return (
     <Tag
+      className={className}
       style={{
         fontFamily: theme.fontFamily[fontFamilyKey],
         fontSize: theme.fontSize[fontSizeKey],
+        fontWeight: theme.fontWeight,
         color: theme.color.text,
         margin: 0,
         padding: 0,
+        whiteSpace: 'pre',
+        cursor: onClick ? 'pointer' : undefined,
+        userSelect: 'none',
         ...style,
       }}
+      onClick={onClick}
     >
       {children}
     </Tag>

@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 
-const Career: FC = () => {
+const CareerPage: FC = () => {
   return <div>Career</div>;
 };
 
-export default Career;
+export default CareerPage;

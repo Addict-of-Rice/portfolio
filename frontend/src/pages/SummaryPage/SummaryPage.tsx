@@ -1,11 +1,11 @@
 import type { FC } from 'react';
 
-const Projects: FC = () => {
+const SummaryPage: FC = () => {
   return (
     <div>
-      Projects
+      Summary
     </div>
   )
 };
 
-export default Projects;
+export default SummaryPage;

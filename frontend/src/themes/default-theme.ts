@@ -1,9 +1,9 @@
-import type { ThemeConfig } from './theme'
+import type { ThemeConfig } from './theme';
 
 export const defaultTheme: ThemeConfig = {
-  font: {
-    heading: "Inter",
-    body: "Inter",
+  fontFamily: {
+    heading: 'Inter',
+    body: 'Inter',
   },
   bodySize: 1,
   typeScale: 1.333,
@@ -13,7 +13,12 @@ export const defaultTheme: ThemeConfig = {
       saturation: 76,
       lightness: 5,
     },
-    background: {
+    background1: {
+      hue: 240,
+      saturation: 60,
+      lightness: 99,
+    },
+    background2: {
       hue: 240,
       saturation: 60,
       lightness: 99,
@@ -32,6 +37,6 @@ export const defaultTheme: ThemeConfig = {
       hue: 242,
       saturation: 100,
       lightness: 62,
-    }
-  }
-}
+    },
+  },
+};

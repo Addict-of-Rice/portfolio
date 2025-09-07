@@ -1,6 +1,6 @@
 import type { FC, ReactNode } from 'react';
-import Row from '../Row/Row';
-import Column from '../Column/Column';
+import Row from '../Structure/Row';
+import Column from '../Structure/Column';
 import { useThemeContext } from '../../providers/ThemeProvider';
 
 export type SplitContentProps = {
@@ -30,7 +30,7 @@ const SplitContent: FC<SplitContentProps> = ({ children, imgSrc, imgFirst }) => 
         width: '100%',
         padding: '24px',
         gap: '24px',
-        backgroundColor: imgFirst ? theme.color.secondary : theme.color.background,
+        backgroundColor: imgFirst ? theme.color.secondary : theme.color.background1,
       }}
     >
       <Column style={{ flex: 1 }}>{imgFirst ? <Image /> : children}</Column>
