@@ -1,14 +1,18 @@
-import type { CSSProperties, FC, ReactNode } from 'react';
+import type { CSSProperties, FC, ReactNode, Ref } from 'react';
 
 type Props = {
+  ref?: Ref<HTMLDivElement>;
+  className?: string;
   style?: CSSProperties;
   children?: ReactNode;
   onClick?: () => void;
 };
 
-const Row: FC<Props> = ({ style, children, onClick }) => {
+const Row: FC<Props> = ({ ref, className, style, children, onClick }) => {
   return (
     <div
+      ref={ref}
+      className={className}
       style={{
         display: 'flex',
         flexDirection: 'row',

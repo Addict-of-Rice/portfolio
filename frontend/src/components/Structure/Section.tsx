@@ -1,8 +1,10 @@
-import type { CSSProperties, FC, ReactNode } from 'react';
+import type { CSSProperties, FC, ReactNode, Ref } from 'react';
 import { useThemeContext } from '../../providers/ThemeProvider';
 import Column from './Column';
 
 type Props = {
+  ref?: Ref<HTMLDivElement>;
+  className?: string;
   style?: CSSProperties;
   children?: ReactNode;
   onClick?: () => void;
@@ -17,6 +19,7 @@ const Section: FC<Props> = (props) => {
       style={{
         padding: '48px',
         backgroundColor: theme.color.background2,
+        cursor: props.onClick ? 'pointer' : undefined,
         ...style,
       }}
       {...rest}

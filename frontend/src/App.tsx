@@ -9,8 +9,13 @@ import Layout from './components/Layout/Layout';
 import ThemeProvider from './providers/ThemeProvider';
 import { matrixTheme } from './themes/matrix-theme';
 import './fonts/fonts.css';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { SplitText, TextPlugin } from 'gsap/all';
 
 function App() {
+  gsap.registerPlugin(useGSAP, SplitText, TextPlugin);
+
   return (
     <ThemeProvider initialTheme={matrixTheme} darkMode={true}>
       <BrowserRouter>
