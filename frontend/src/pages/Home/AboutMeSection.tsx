@@ -14,14 +14,14 @@ const AboutMeSection: FC = () => {
         <C_p>
           {"I'm a "}
           <C_p color='primary' span>
-            Full Stack Developer
+            Developer
           </C_p>
           . My purpose is to write code. I desire to create software that pushes humanity forward,
           and be recognised for my contributions.
         </C_p>
         <br />
         <C_p>
-          In my journey as a software developer, striving for excellence has often left me burnt out
+          My pursuit for excellence has often left me burnt out
           and heartbroken. Due to external factors, projects can get delayed, canceled or stuck in
           development hell. However, I've come to realise that within these experiences I still find
           the opportunity to learn and improve. Furthermore, once a project is deployed, I

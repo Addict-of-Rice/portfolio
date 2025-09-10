@@ -4,6 +4,7 @@ import { useThemeContext } from '../../providers/ThemeProvider';
 import Column from '../Structure/Column';
 import Header from './Header';
 import Footer from './Footer';
+import Console from '../Console/Console';
 
 const Layout: FC = () => {
   const { theme } = useThemeContext();
@@ -18,6 +19,8 @@ const Layout: FC = () => {
         minHeight: '100vh',
         minWidth: '100vw',
         maxWidth: '100vw',
+        overflowX: 'hidden',
+        scrollbarWidth: 'thin'
       }}
     >
       <Column>
@@ -26,6 +29,7 @@ const Layout: FC = () => {
       </Column>
 
       <Footer />
+      <Console />
     </Column>
   );
 };

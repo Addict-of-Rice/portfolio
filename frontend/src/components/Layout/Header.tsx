@@ -31,10 +31,10 @@ const Header: FC = () => {
 
       <Row style={{ alignItems: 'center' }}>
         <Navbar />
-        <Typography variant='h6' responsiveMin='p'>
+        {/* <Typography variant='h6' responsiveMin='p'>
           {' | '}
         </Typography>
-        <SettingsIcon />
+        <SettingsIcon /> */}
       </Row>
     </Row>
   );

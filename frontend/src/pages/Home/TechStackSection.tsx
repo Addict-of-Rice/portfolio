@@ -1,42 +1,15 @@
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 import Section from '../../components/Structure/Sections/Section';
-import Column from '../../components/Structure/Column';
-import Typography from '../../components/Typography/Typography';
 import { FaGithub, FaReact } from 'react-icons/fa';
 import Row from '../../components/Structure/Row';
-import IconWrapper from '../../components/IconWrapper/IconWrapper';
+import IconWrapper, { type IconWrapperProps } from '../../components/IconWrapper/IconWrapper';
 import FigmaIcon from '../../assets/icons/FigmaIcon';
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
 import { SiNestjs, SiPrisma } from 'react-icons/si';
 import { BsStripe } from 'react-icons/bs';
-import { openInNewTab } from '../../utils/utils';
 
 const TechStackSection: FC = () => {
-  type TechProps = {
-    icon: ReactNode;
-    title: string;
-    link: string;
-  };
-
-  const Tech: FC<TechProps> = ({ title, icon, link }) => {
-    return (
-      <IconWrapper
-        bgColor='black'
-        size='6rem'
-        border='1px white solid'
-        onClick={() => openInNewTab(link)}
-      >
-        <Column style={{ justifyContent: 'center', alignItems: 'center', gap: '4px' }}>
-          {icon}
-          <Typography variant='small' style={{ textAlign: 'center' }}>
-            {title}
-          </Typography>
-        </Column>
-      </IconWrapper>
-    );
-  };
-
-  const techList: TechProps[] = [
+  const techList: IconWrapperProps[] = [
     {
       icon: <FigmaIcon />,
       title: 'Figma',
@@ -99,7 +72,7 @@ const TechStackSection: FC = () => {
         }}
       >
         {techList.map((tech) => (
-          <Tech key={tech.title} {...tech} />
+          <IconWrapper key={tech.title} {...tech} />
         ))}
       </Row>
     </Section>

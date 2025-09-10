@@ -6,6 +6,7 @@ import AlternatorWrapper from '../../components/AlternatorWrapper/AlternatorWrap
 import { useNavigate } from 'react-router';
 import Page from '../../components/Structure/Page';
 import AlignSection from '../../components/Structure/Sections/AlignSection';
+import ContactsSection from './ContactsSection';
 
 const HomePage: FC = () => {
   const navigate = useNavigate();
@@ -13,8 +14,9 @@ const HomePage: FC = () => {
   return (
     <Page>
       <HeroSection />
-      <TechStackSection />
+      <ContactsSection />
       <AboutMeSection />
+      <TechStackSection />
 
       <AlternatorWrapper
         targetFC={AlignSection}

@@ -22,7 +22,7 @@ const HeroSection: FC = () => {
         justifyContent: 'space-between',
       }}
     >
-      <Row style={{ justifyContent: 'flex-end' }}>GitHub Linkedin Slack Email WhatsApp</Row>
+      <Row style={{ justifyContent: 'flex-end' }}></Row>
       <Row>
         <Typography className='prefix' variant='h2' responsiveMin='p'>
           {prefix}

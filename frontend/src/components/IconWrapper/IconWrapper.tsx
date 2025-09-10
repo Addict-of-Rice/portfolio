@@ -1,31 +1,36 @@
 import type { FC, ReactNode } from 'react';
+import { openInNewTab } from '../../utils/utils';
+import Column from '../Structure/Column';
+import Typography from '../Typography/Typography';
 
-type Props = {
-  size: string;
-  bgColor: string;
-  border?: string;
-  onClick?: () => void;
-  children: ReactNode;
+export type IconWrapperProps = {
+  icon: ReactNode;
+  title: string;
+  link: string;
 };
 
-const IconWrapper: FC<Props> = ({ size, bgColor, border, onClick, children }) => {
+const IconWrapper: FC<IconWrapperProps> = ({ icon, title, link }) => {
   return (
-    <div
-      onClick={onClick}
+    <Column
+      onClick={() => openInNewTab(link)}
       style={{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: size,
-        height: size,
-        backgroundColor: bgColor,
+        width: '6em',
+        height: '6em',
+        backgroundColor: 'black',
         borderRadius: '16px',
-        border,
-        cursor: onClick ? 'pointer' : undefined,
+        border: '1px white solid',
+        cursor: 'pointer',
+        gap: '4px',
       }}
     >
-      {children}
-    </div>
+      {icon}
+      <Typography variant='small' style={{ textAlign: 'center' }}>
+        {title}
+      </Typography>
+    </Column>
   );
 };
 
