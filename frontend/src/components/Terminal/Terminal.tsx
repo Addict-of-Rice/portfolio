@@ -3,15 +3,14 @@ import Column from '../Structure/Column';
 import { useThemeContext } from '../../providers/ThemeProvider';
 import Row from '../Structure/Row';
 import { C_p, C_s } from '../Typography/Typography';
+import { runShell } from './Shell';
 
-const Console: FC = () => {
+const Terminal: FC = () => {
   const { theme } = useThemeContext();
   const [isOpen, setIsOpen] = useState(false);
   const lineRef = useRef('');
-  const [text, setText] = useState('> ');
+  const [text, setText] = useState('Type "help" to see commands\n> ');
   const [cursor, setCursor] = useState('_');
-
-  const print = () => {};
 
   useEffect(() => {
     console.log('line: ', lineRef.current);
@@ -30,10 +29,14 @@ const Console: FC = () => {
     }
   };
 
+  const print = (value: string) => {
+    setText((prev) => `${prev}\n${value}\n`);
+  };
+
   const enter = () => {
     setText((prev) => prev + '\n');
+    runShell(lineRef.current, print);
     lineRef.current = '';
-    
     setText((prev) => prev + '> ');
   };
 
@@ -84,9 +87,14 @@ const Console: FC = () => {
 
       {isOpen && (
         <Column
-          style={{ backgroundColor: theme.color.background1, height: '100%', padding: '16px' }}
+          style={{
+            backgroundColor: theme.color.background1,
+            height: '100%',
+            padding: '16px',
+            flexDirection: 'column-reverse',
+            overflow: 'hidden',
+          }}
         >
-          <C_p>Type "help"</C_p>
           <C_p>
             {text}
             {cursor}
@@ -97,4 +105,4 @@ const Console: FC = () => {
   );
 };
 
-export default Console;
+export default Terminal;

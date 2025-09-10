@@ -4,7 +4,7 @@ import { useThemeContext } from '../../providers/ThemeProvider';
 import Column from '../Structure/Column';
 import Header from './Header';
 import Footer from './Footer';
-import Console from '../Console/Console';
+import Terminal from '../Terminal/Terminal';
 
 const Layout: FC = () => {
   const { theme } = useThemeContext();
@@ -29,7 +29,7 @@ const Layout: FC = () => {
       </Column>
 
       <Footer />
-      <Console />
+      <Terminal />
     </Column>
   );
 };
