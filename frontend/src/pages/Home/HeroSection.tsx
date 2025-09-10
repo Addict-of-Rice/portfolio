@@ -1,16 +1,16 @@
 import { type FC } from 'react';
 import Row from '../../components/Structure/Row';
-import Section from '../../components/Structure/Section';
 import Typography from '../../components/Typography/Typography';
 import { useThemeContext } from '../../providers/ThemeProvider';
 import { useTypewriter } from '../../hooks/useTypewriter';
+import Section from '../../components/Structure/Sections/Section';
 
 const HeroSection: FC = () => {
   const { theme } = useThemeContext();
 
   const { prefix, word, suffix, cursor } = useTypewriter(
     "Let's ",
-    ['create', 'innovate', 'design', 'develop', 'build', 'profit'],
+    ['create', 'innovate', 'design', 'develop', 'build', 'implement', 'succeed', 'profit'],
     ' together',
     '_'
   );

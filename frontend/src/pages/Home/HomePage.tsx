@@ -3,9 +3,9 @@ import HeroSection from './HeroSection';
 import TechStackSection from './TechStackSection';
 import AboutMeSection from './AboutMeSection';
 import AlternatorWrapper from '../../components/AlternatorWrapper/AlternatorWrapper';
-import AlignSection from '../../components/Structure/AlignSection';
 import { useNavigate } from 'react-router';
 import Page from '../../components/Structure/Page';
+import AlignSection from '../../components/Structure/Sections/AlignSection';
 
 const HomePage: FC = () => {
   const navigate = useNavigate();
@@ -18,7 +18,7 @@ const HomePage: FC = () => {
 
       <AlternatorWrapper
         targetFC={AlignSection}
-        propOverride={[{ align: 'left' }, { align: 'right' }]}
+        propOverride={[{ align: 'right' }, { align: 'left' }]}
       >
         <AlignSection
           title='Personal Projects'

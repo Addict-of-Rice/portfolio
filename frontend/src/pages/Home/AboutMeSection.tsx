@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import Section from '../../components/Structure/Section';
 import Typography, { C_p } from '../../components/Typography/Typography';
 import Column from '../../components/Structure/Column';
+import Section from '../../components/Structure/Sections/Section';
 
 const AboutMeSection: FC = () => {
   return (
@@ -24,8 +24,8 @@ const AboutMeSection: FC = () => {
           In my journey as a software developer, striving for excellence has often left me burnt out
           and heartbroken. Due to external factors, projects can get delayed, canceled or stuck in
           development hell. However, I've come to realise that within these experiences I still find
-          the opportunity to learn and improve. Furthermore, when a project gets deployed and I
-          receive positive feedback it makes the struggle worthwhile.
+          the opportunity to learn and improve. Furthermore, once a project is deployed, I
+          receive positive feedback. This makes the struggle worthwhile. Through persistence, I overcome.
         </C_p>
         <br />
         <C_p>

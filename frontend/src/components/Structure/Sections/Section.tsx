@@ -1,6 +1,6 @@
 import type { CSSProperties, FC, ReactNode, Ref } from 'react';
-import { useThemeContext } from '../../providers/ThemeProvider';
-import Column from './Column';
+import { useThemeContext } from '../../../providers/ThemeProvider';
+import Column from '../Column';
 
 type Props = {
   ref?: Ref<HTMLDivElement>;

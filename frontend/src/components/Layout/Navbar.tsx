@@ -1,4 +1,4 @@
-import { useMemo, type FC } from 'react';
+import { Fragment, useMemo, type FC } from 'react';
 import Row from '../Structure/Row';
 import Typography from '../Typography/Typography';
 import { useLocation, useNavigate } from 'react-router';
@@ -40,9 +40,8 @@ const Navbar: FC = () => {
   return (
     <Row>
       {paths.map((path, index) => (
-        <>
+        <Fragment key={path.heading}>
           <Typography
-            key={path.heading}
             variant='h6'
             onClick={isHome ? () => path.homeAction : () => navigate(path.pathname)}
             style={{ color: getPathColour(path.pathname) }}
@@ -51,14 +50,11 @@ const Navbar: FC = () => {
             {path.heading}
           </Typography>
           {index < paths.length - 1 && (
-            <Typography
-            key={`${path.heading}-splitter`}
-            variant='h6'
-            responsiveMin='tiny'>
+            <Typography variant='h6' responsiveMin='tiny'>
               {' | '}
             </Typography>
           )}
-        </>
+        </Fragment>
       ))}
     </Row>
   );

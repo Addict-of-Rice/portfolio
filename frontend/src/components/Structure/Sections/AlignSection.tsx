@@ -1,7 +1,7 @@
 import type { FC } from 'react';
+import { C_h3, C_h6 } from '../../Typography/Typography';
+import Column from '../Column';
 import Section from './Section';
-import { C_h3, C_h6 } from '../Typography/Typography';
-import Column from './Column';
 
 type Props = {
   title: string;
@@ -21,7 +21,7 @@ const AlignSection: FC<Props> = ({ title, description, align = 'left', onClick }
     >
       <Column style={{ maxWidth: '680px' }}>
         <C_h3>{title}</C_h3>
-        <C_h6>{description}</C_h6>
+        <C_h6 style={{textAlign: 'justify'}}>{description}</C_h6>
       </Column>
     </Section>
   );

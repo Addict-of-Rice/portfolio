@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from 'react';
-import Section from '../../components/Structure/Section';
+import Section from '../../components/Structure/Sections/Section';
 import Column from '../../components/Structure/Column';
 import Typography from '../../components/Typography/Typography';
 import { FaGithub, FaReact } from 'react-icons/fa';
