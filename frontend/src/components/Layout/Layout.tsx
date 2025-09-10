@@ -16,7 +16,8 @@ const Layout: FC = () => {
         justifyContent: 'space-between',
         backgroundColor: theme.color.background1,
         minHeight: '100vh',
-        minWidth: '100vw'
+        minWidth: '100vw',
+        maxWidth: '100vw',
       }}
     >
       <Column>

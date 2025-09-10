@@ -1,4 +1,4 @@
-import { useRef, type FC } from 'react';
+import { type FC } from 'react';
 import Row from '../../components/Structure/Row';
 import Section from '../../components/Structure/Section';
 import Typography from '../../components/Typography/Typography';
@@ -7,7 +7,6 @@ import { useTypewriter } from '../../hooks/useTypewriter';
 
 const HeroSection: FC = () => {
   const { theme } = useThemeContext();
-  const heroTextRef = useRef<HTMLDivElement>(null);
 
   const { prefix, word, suffix, cursor } = useTypewriter(
     "Let's ",
@@ -24,17 +23,22 @@ const HeroSection: FC = () => {
       }}
     >
       <Row style={{ justifyContent: 'flex-end' }}>GitHub Linkedin Slack Email WhatsApp</Row>
-      <Row ref={heroTextRef}>
-        <Typography className='prefix' variant='h2'>
+      <Row>
+        <Typography className='prefix' variant='h2' responsiveMin='p'>
           {prefix}
         </Typography>
-        <Typography className='word' variant='h2' style={{ color: theme.color.primary }} span>
+        <Typography
+          className='word'
+          variant='h2'
+          style={{ color: theme.color.primary }}
+          responsiveMin='p'
+        >
           {word}
         </Typography>
-        <Typography className='suffix' variant='h2'>
+        <Typography className='suffix' variant='h2' responsiveMin='p'>
           {suffix}
         </Typography>
-        <Typography className='cursor' variant='h2'>
+        <Typography className='cursor' variant='h2' responsiveMin='p'>
           {cursor}
         </Typography>
       </Row>

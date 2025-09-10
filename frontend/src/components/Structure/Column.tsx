@@ -13,6 +13,7 @@ const Column: FC<Props> = ({ ref, className, style, children, onClick }) => {
     <div
       ref={ref}
       className={className}
+      onClick={onClick}
       style={{
         display: 'flex',
         flexDirection: 'column',

@@ -21,15 +21,19 @@ const Header: FC = () => {
       }}
     >
       <Row style={{ alignItems: 'baseline' }} onClick={() => navigate('/')}>
-        <Typography variant='h5'>Todd Collins - </Typography>
-        <Typography variant='h4' style={{ color: theme.color.primary }}>
+        <Typography variant='h5' responsiveMin='p'>
+          {'Todd Collins - '}
+        </Typography>
+        <Typography variant='h4' style={{ color: theme.color.primary }} responsiveMin='p'>
           Full Stack Dev
         </Typography>
       </Row>
 
       <Row style={{ alignItems: 'center' }}>
         <Navbar />
-        <Typography variant='h5'> | </Typography>
+        <Typography variant='h6' responsiveMin='p'>
+          {' | '}
+        </Typography>
         <SettingsIcon />
       </Row>
     </Row>

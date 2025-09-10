@@ -42,13 +42,22 @@ const Navbar: FC = () => {
       {paths.map((path, index) => (
         <>
           <Typography
+            key={path.heading}
             variant='h6'
             onClick={isHome ? () => path.homeAction : () => navigate(path.pathname)}
             style={{ color: getPathColour(path.pathname) }}
+            responsiveMin='tiny'
           >
             {path.heading}
           </Typography>
-          {index < paths.length - 1 && <Typography variant='h6'> | </Typography>}
+          {index < paths.length - 1 && (
+            <Typography
+            key={`${path.heading}-splitter`}
+            variant='h6'
+            responsiveMin='tiny'>
+              {' | '}
+            </Typography>
+          )}
         </>
       ))}
     </Row>

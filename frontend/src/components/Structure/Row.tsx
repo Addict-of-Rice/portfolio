@@ -16,6 +16,7 @@ const Row: FC<Props> = ({ ref, className, style, children, onClick }) => {
       style={{
         display: 'flex',
         flexDirection: 'row',
+        flexWrap: 'wrap',
         cursor: onClick ? 'pointer' : undefined,
         ...style,
       }}
