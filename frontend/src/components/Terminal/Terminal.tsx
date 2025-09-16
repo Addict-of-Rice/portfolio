@@ -5,6 +5,7 @@ import Row from '../Structure/Row';
 import { C_p, C_s } from '../Typography/Typography';
 import { Shell } from './Shell';
 import { useNavigate } from 'react-router';
+import { sleep } from '../../utils/utils';
 
 const Terminal: FC = () => {
   const navigate = useNavigate();
@@ -14,13 +15,38 @@ const Terminal: FC = () => {
   const [text, setText] = useState('');
   const shellRef = useRef<Shell | null>(null);
   const [cursor, setCursor] = useState('_');
+  const cursorInstanceRef = useRef(0);
+  const flashDelayRef = useRef(100);
 
   useEffect(() => {
     openRef.current = isOpen;
   }, [isOpen]);
 
   useEffect(() => {
-    if (shellRef.current === null) shellRef.current = new Shell(setText, navigate);
+    const flashCursor = async () => {
+      const instance = cursorInstanceRef.current;
+      if (flashDelayRef.current > 0) {
+        setCursor('_');
+        flashDelayRef.current -= 1;
+        console.log('flashRef.current: ', flashDelayRef.current);
+        await sleep(1);
+      } else {
+        setCursor((prev) => (prev === '_' ? '' : '_'));
+        await sleep(500);
+      }
+      if (instance === cursorInstanceRef.current) flashCursor();
+    };
+
+    const delayFlashing = () => {
+      flashDelayRef.current = 100;
+      cursorInstanceRef.current += 1;
+      flashCursor();
+    };
+
+    if (shellRef.current === null) {
+      shellRef.current = new Shell(setText, navigate);
+      flashCursor();
+    }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       event.preventDefault();
@@ -28,6 +54,7 @@ const Terminal: FC = () => {
       if (event.ctrlKey && event.key === '`') {
         setIsOpen((prev) => !prev);
       } else if (openRef.current) {
+        delayFlashing();
         if (event.ctrlKey && event.key.toLowerCase() === 'c') {
           shellRef.current!.exit();
         } else if (event.key === 'Enter') {
@@ -41,6 +68,7 @@ const Terminal: FC = () => {
     };
 
     window.addEventListener('keydown', handleKeyDown);
+
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
     };

@@ -18,11 +18,11 @@ help - Displays this message
 clear - Clears the terminal
 ls - lists available pages
 cd [page] - navigates to the specified page
-uni - run university command line assignment
-crash - lists ways to crash this website
 exit - exit the current program (Ctrl + C)
-          `
-        );
+`
+);
+// uni - run university command line assignment
+// crash - lists ways to crash this website
         break;
       case 'clear':
         this.clear();

@@ -35,21 +35,21 @@ const TechStackSection: FC = () => {
       title: 'Prisma',
       link: 'https://www.prisma.io/',
     },
-    {
-      icon: <BiLogoPostgresql size={'3rem'} color='#396C94' />,
-      title: 'PostgreSQL',
-      link: 'https://www.postgresql.org/',
-    },
+    // {
+    //   icon: <BiLogoPostgresql size={'3rem'} color='#396C94' />,
+    //   title: 'PostgreSQL',
+    //   link: 'https://www.postgresql.org/',
+    // },
     {
       icon: <FaGithub size={'3rem'} color='white' />,
       title: 'GitHub Pages',
       link: 'https://pages.github.com',
     },
-    {
-      icon: <BsStripe size={'3rem'} color='#6860FF' />,
-      title: 'Stripe',
-      link: 'https://stripe.com/',
-    },
+    // {
+    //   icon: <BsStripe size={'3rem'} color='#6860FF' />,
+    //   title: 'Stripe',
+    //   link: 'https://stripe.com/',
+    // },
   ];
 
   return (
