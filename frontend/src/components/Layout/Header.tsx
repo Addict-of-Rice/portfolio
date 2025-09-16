@@ -17,6 +17,7 @@ const Header: FC = () => {
         alignItems: 'center',
         paddingBlock: '16px',
         paddingInline: '48px',
+        // backgroundColor: theme.color.background1,
         borderBottom: `1px ${theme.color.text} solid`,
       }}
     >

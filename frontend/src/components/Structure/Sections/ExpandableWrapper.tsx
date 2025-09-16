@@ -20,13 +20,20 @@ export const useExpandableWrapperContext = () => {
 };
 
 type Props = {
+  initialActiveTitle?: string;
   showPadding?: boolean;
   children: ReactNode;
 };
 
-export const ExpandableWrapperProvider: FC<Props> = ({ showPadding, children }) => {
+export const ExpandableWrapperProvider: FC<Props> = ({
+  initialActiveTitle,
+  showPadding,
+  children,
+}) => {
   const { theme } = useThemeContext();
-  const [activeTitle, setActiveTitle] = useState<string | null>(null);
+  const [activeTitle, setActiveTitle] = useState<string | null>(
+    initialActiveTitle ? initialActiveTitle : null
+  );
 
   return (
     <ExpandableWrapperContext.Provider value={{ activeTitle, setActiveTitle }}>

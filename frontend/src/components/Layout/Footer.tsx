@@ -9,7 +9,7 @@ const Footer: FC = () => {
   return (
     <Row
       style={{
-        backgroundColor: theme.color.background1,
+        // backgroundColor: theme.color.background1,
         justifyContent: 'center',
         paddingBlock: '24px',
         borderTop: `1px ${theme.color.text} solid`,

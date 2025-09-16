@@ -24,7 +24,7 @@ const Navbar: FC = () => {
     {
       heading: 'About Me',
       pathname: '/',
-      homeAction: () => smoothScrollToId('about-me-section'),
+      homeAction: () => smoothScrollToId('contacts-section'),
     },
     {
       heading: 'Projects',

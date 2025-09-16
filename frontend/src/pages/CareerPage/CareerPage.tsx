@@ -8,7 +8,7 @@ import { C_p } from '../../components/Typography/Typography';
 const CareerPage: FC = () => {
   return (
     <Page>
-      <ExpandableWrapperProvider>
+      <ExpandableWrapperProvider initialActiveTitle='AvoChoc'>
         <ExpandableSection
           title='AvoChoc'
           year='(2023-2025)'
