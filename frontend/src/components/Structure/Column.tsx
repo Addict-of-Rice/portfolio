@@ -2,16 +2,18 @@ import type { CSSProperties, FC, ReactNode, Ref } from 'react';
 
 type Props = {
   ref?: Ref<HTMLDivElement>;
+  id?: string;
   className?: string;
   style?: CSSProperties;
   children?: ReactNode;
   onClick?: () => void;
 };
 
-const Column: FC<Props> = ({ ref, className, style, children, onClick }) => {
+const Column: FC<Props> = ({ ref, id, className, style, children, onClick }) => {
   return (
     <div
       ref={ref}
+      id={id}
       className={className}
       onClick={onClick}
       style={{

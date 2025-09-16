@@ -39,6 +39,7 @@ const ContactsSection: FC = () => {
 
   return (
     <Section
+      id='contacts-section'
       style={{
         display: 'inline',
         flexDirection: 'row',

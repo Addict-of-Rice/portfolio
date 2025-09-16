@@ -5,7 +5,7 @@ import Section from '../../components/Structure/Sections/Section';
 
 const AboutMeSection: FC = () => {
   return (
-    <Section>
+    <Section id='about-me-section'>
       <Typography variant='h3' responsiveMin='h6'>
         About Me
       </Typography>

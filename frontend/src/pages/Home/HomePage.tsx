@@ -23,16 +23,19 @@ const HomePage: FC = () => {
         propOverride={[{ align: 'right' }, { align: 'left' }]}
       >
         <AlignSection
+          id='projects-section'
           title='Personal Projects'
           description='My own projects which are not part of my official career nor education'
           onClick={() => navigate('/projects')}
         />
         <AlignSection
+          id='career-section'
           title='Career'
           description='My contributions to projects during my professional career'
           onClick={() => navigate('/career')}
         />
         <AlignSection
+          id='education-section'
           title='Education'
           description='External courses, university projects and results from my educational record'
           onClick={() => navigate('/education')}

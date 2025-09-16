@@ -14,26 +14,32 @@ const Navbar: FC = () => {
   const getPathColour = (pathname: string) =>
     location.pathname === pathname ? theme.color.primary : theme.color.text;
 
+  const smoothScrollToId = (id: string) =>
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+
   const paths = [
     {
       heading: 'About Me',
       pathname: '/',
-      homeAction: () => {},
+      homeAction: () => smoothScrollToId('about-me-section'),
     },
     {
       heading: 'Projects',
       pathname: '/projects',
-      homeAction: () => {},
+      homeAction: () => smoothScrollToId('projects-section'),
     },
     {
       heading: 'Career',
       pathname: '/career',
-      homeAction: () => {},
+      homeAction: () => smoothScrollToId('career-section'),
     },
     {
       heading: 'Education',
       pathname: '/education',
-      homeAction: () => {},
+      homeAction: () => smoothScrollToId('education-section'),
     },
   ];
 
@@ -43,7 +49,7 @@ const Navbar: FC = () => {
         <Fragment key={path.heading}>
           <Typography
             variant='h6'
-            onClick={isHome ? () => path.homeAction : () => navigate(path.pathname)}
+            onClick={isHome ? () => path.homeAction() : () => navigate(path.pathname)}
             style={{ color: getPathColour(path.pathname) }}
             responsiveMin='tiny'
           >

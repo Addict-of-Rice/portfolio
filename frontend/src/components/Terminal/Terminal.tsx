@@ -28,7 +28,6 @@ const Terminal: FC = () => {
       if (flashDelayRef.current > 0) {
         setCursor('_');
         flashDelayRef.current -= 1;
-        console.log('flashRef.current: ', flashDelayRef.current);
         await sleep(1);
       } else {
         setCursor((prev) => (prev === '_' ? '' : '_'));

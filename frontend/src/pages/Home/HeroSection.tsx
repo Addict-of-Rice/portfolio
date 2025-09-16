@@ -17,6 +17,7 @@ const HeroSection: FC = () => {
 
   return (
     <Section
+      id='hero-section'
       style={{
         height: '600px',
         justifyContent: 'space-between',

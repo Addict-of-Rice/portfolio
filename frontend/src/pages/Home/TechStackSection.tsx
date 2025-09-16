@@ -54,6 +54,7 @@ const TechStackSection: FC = () => {
 
   return (
     <Section
+      id='tech-stack-section'
       style={{
         display: 'inline',
         flexDirection: 'row',

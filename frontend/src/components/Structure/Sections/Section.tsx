@@ -4,6 +4,7 @@ import Column from '../Column';
 
 type Props = {
   ref?: Ref<HTMLDivElement>;
+  id?: string;
   className?: string;
   style?: CSSProperties;
   children?: ReactNode;

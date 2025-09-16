@@ -4,7 +4,7 @@ To Do:
 - timeline for homepage
 - animation enhancements
 - social media links
-- matrix website
+- matrix background
 - videos for mobile apps
 
 - add university assignments to console
