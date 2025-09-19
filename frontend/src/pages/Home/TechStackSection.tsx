@@ -7,33 +7,34 @@ import FigmaIcon from '../../assets/icons/FigmaIcon';
 import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
 import { SiNestjs, SiPrisma } from 'react-icons/si';
 import { BsStripe } from 'react-icons/bs';
+import { openInNewTab } from '../../utils/utils';
 
 const TechStackSection: FC = () => {
   const techList: IconWrapperProps[] = [
     {
       icon: <FigmaIcon />,
       title: 'Figma',
-      link: 'https://www.figma.com/',
+      onClick: () => openInNewTab('https://www.figma.com/'),
     },
     {
       icon: <BiLogoTypescript size={'3rem'} color='#007ACC' />,
       title: 'Typescript',
-      link: 'https://www.typescriptlang.org/',
+      onClick: () => openInNewTab('https://www.typescriptlang.org/'),
     },
     {
       icon: <FaReact size={'3rem'} color='#00FFFF' />,
       title: 'React',
-      link: 'https://react.dev/',
+      onClick: () => openInNewTab('https://react.dev/'),
     },
     {
       icon: <SiNestjs size={'3rem'} color='#EA285C' />,
       title: 'NestJS',
-      link: 'https://nestjs.com/',
+      onClick: () => openInNewTab('https://nestjs.com/'),
     },
     {
       icon: <SiPrisma size={'3rem'} color='white' />,
       title: 'Prisma',
-      link: 'https://www.prisma.io/',
+      onClick: () => openInNewTab('https://www.prisma.io/'),
     },
     // {
     //   icon: <BiLogoPostgresql size={'3rem'} color='#396C94' />,
@@ -43,7 +44,7 @@ const TechStackSection: FC = () => {
     {
       icon: <FaGithub size={'3rem'} color='white' />,
       title: 'GitHub Pages',
-      link: 'https://pages.github.com',
+      onClick: () => openInNewTab('https://pages.github.com'),
     },
     // {
     //   icon: <BsStripe size={'3rem'} color='#6860FF' />,

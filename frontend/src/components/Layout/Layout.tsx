@@ -5,10 +5,12 @@ import Header from './Header';
 import Footer from './Footer';
 import Terminal from '../Terminal/Terminal';
 import MatrixBackground from '../MatrixBackground/MatrixBackground';
-import { useThemeContext } from '../../providers/ThemeProvider';
+import { ToastContainer } from 'react-toastify';
+// import { useThemeContext } from '../../providers/ThemeProvider';
+import './Toast.css';
 
 const Layout: FC = () => {
-  const { theme } = useThemeContext();
+  // const { theme } = useThemeContext();
 
   return (
     <Column
@@ -32,6 +34,8 @@ const Layout: FC = () => {
       <Footer />
       <MatrixBackground />
       <Terminal />
+
+      <ToastContainer theme='dark' position='top-center' />
     </Column>
   );
 };

@@ -1,11 +1,10 @@
 To Do:
 - background images
-- smooth scroll navigation for homepage
 - timeline for homepage
 - animation enhancements
 - social media links
-- matrix background
 - videos for mobile apps
+- add npm projects
 
 - add university assignments to console
 - full stack with Postgres, Nextjs, React and Figma
