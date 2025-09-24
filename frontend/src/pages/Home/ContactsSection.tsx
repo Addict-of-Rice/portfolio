@@ -1,7 +1,7 @@
 import type { FC } from 'react';
 import type { IconWrapperProps } from '../../components/IconWrapper/IconWrapper';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import SlackIcon from '../../assets/icons/SlackIcon';
+// import SlackIcon from '../../assets/icons/SlackIcon';
 import IconWrapper from '../../components/IconWrapper/IconWrapper';
 import Row from '../../components/Structure/Row';
 import Section from '../../components/Structure/Sections/Section';

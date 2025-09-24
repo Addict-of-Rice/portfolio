@@ -1,5 +1,4 @@
 import type { FC, ReactNode } from 'react';
-import { openInNewTab } from '../../utils/utils';
 import Column from '../Structure/Column';
 import Typography from '../Typography/Typography';
 import { pipe } from 'remeda';

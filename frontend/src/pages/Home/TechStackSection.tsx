@@ -4,9 +4,12 @@ import { FaGithub, FaReact } from 'react-icons/fa';
 import Row from '../../components/Structure/Row';
 import IconWrapper, { type IconWrapperProps } from '../../components/IconWrapper/IconWrapper';
 import FigmaIcon from '../../assets/icons/FigmaIcon';
-import { BiLogoPostgresql, BiLogoTypescript } from 'react-icons/bi';
+import {
+  // BiLogoPostgresql,
+  BiLogoTypescript,
+} from 'react-icons/bi';
 import { SiNestjs, SiPrisma } from 'react-icons/si';
-import { BsStripe } from 'react-icons/bs';
+// import { BsStripe } from  'react-icons/bs';
 import { openInNewTab } from '../../utils/utils';
 
 const TechStackSection: FC = () => {

@@ -3,7 +3,7 @@ import Row from '../Structure/Row';
 import Typography from '../Typography/Typography';
 import { useThemeContext } from '../../providers/ThemeProvider';
 import Navbar from './Navbar';
-import SettingsIcon from '../../assets/icons/SettingsIcon';
+// import SettingsIcon from '../../assets/icons/SettingsIcon';
 import { useNavigate } from 'react-router';
 
 const Header: FC = () => {
