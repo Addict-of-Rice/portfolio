@@ -18,7 +18,7 @@ function App() {
 
   return (
     <ThemeProvider initialTheme={matrixTheme} darkMode={true}>
-      <BrowserRouter>
+      <BrowserRouter basename='/portfolio'>
         <Routes>
           <Route element={<Layout />}>
             <Route path='/' element={<HomePage />} />
