@@ -4,6 +4,7 @@ import ExpandableSection from '../../components/Structure/Sections/ExpandableSec
 import { ExpandableWrapperProvider } from '../../components/Structure/Sections/ExpandableWrapper';
 import Button from '../../components/Button/Button';
 import { C_p } from '../../components/Typography/Typography';
+import { openInNewTab } from '../../utils/utils';
 
 const CareerPage: FC = () => {
   return (
@@ -13,13 +14,12 @@ const CareerPage: FC = () => {
           title='AvoChoc'
           year='(2023-2025)'
           description='Software Development Company'
-          buttons={<Button text='Visit' onClick={() => {}} />}
+          buttons={<Button text='Visit' onClick={() => openInNewTab('https://avochoc.com/')} />}
         >
           <ExpandableWrapperProvider showPadding>
             <ExpandableSection
               title='Inqaku'
               description='MySAFA Soccer League (Admin Portal)'
-              buttons={<Button text='Visit' onClick={() => {}} />}
               round
             >
               <C_p>
@@ -47,7 +47,9 @@ const CareerPage: FC = () => {
             <ExpandableSection
               title='WALL-E'
               description='Wallbox Service (Frontend and Mobile App)'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button text='Visit' onClick={() => openInNewTab('https://www.wall-e.works/')} />
+              }
               round
             >
               <C_p>
@@ -87,7 +89,12 @@ const CareerPage: FC = () => {
             <ExpandableSection
               title='Tangibles'
               description='Coding Game (Progressive Web App)'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button
+                  text='Visit'
+                  onClick={() => openInNewTab('https://tangible-games.com/games')}
+                />
+              }
               round
             >
               <C_p>
@@ -128,7 +135,9 @@ const CareerPage: FC = () => {
             <ExpandableSection
               title='Elyvate'
               description='Vehicle Manufacturing Collaboration (Frontend)'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button text='Visit' onClick={() => openInNewTab('https://www.elyvate.ai/')} />
+              }
               round
             >
               <C_p>
@@ -155,7 +164,7 @@ const CareerPage: FC = () => {
             <ExpandableSection
               title='HR System'
               description='In-House System for HR (Frontend and Backend)'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={<Button text='Visit' onClick={() => openInNewTab('https://avochoc.com/')} />}
               round
             >
               <C_p>
