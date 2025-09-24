@@ -4,29 +4,41 @@ import Page from '../../components/Structure/Page';
 import ExpandableSection from '../../components/Structure/Sections/ExpandableSection';
 import { ExpandableWrapperProvider } from '../../components/Structure/Sections/ExpandableWrapper';
 import { C_p } from '../../components/Typography/Typography';
+import { openInNewTab } from '../../utils/utils';
+import academicRecord from '../../assets/images/Todd Full Academic Record.png';
 
 const EducationPage: FC = () => {
   return (
     <Page>
       <ExpandableWrapperProvider>
-        <ExpandableSection
-          title='Courses'
-          description='from the Internet'
-          buttons={<Button text='Visit' onClick={() => {}} />}
-        >
+        <ExpandableSection title='Courses' description='from the Internet'>
           <ExpandableWrapperProvider showPadding>
             <ExpandableSection
               title='Learn React'
               year='(2023)'
               description='Srimba'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button
+                  text='Visit'
+                  onClick={() => openInNewTab('https://scrimba.com/learn-react-c0e')}
+                />
+              }
               round
             />
             <ExpandableSection
               title='Flutter Bootcamp'
               year='(2020)'
               description='The App Brewery'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button
+                  text='Visit'
+                  onClick={() =>
+                    openInNewTab(
+                      'https://www.appbrewery.com/p/flutter-development-bootcamp-with-dart'
+                    )
+                  }
+                />
+              }
               round
             />
           </ExpandableWrapperProvider>
@@ -37,17 +49,20 @@ const EducationPage: FC = () => {
           description='Nelson Mandela University'
           buttons={
             <>
-              <Button text='Visit' onClick={() => {}} />
-              <Button text='Download Record' onClick={() => {}} />
+              <Button
+                text='Visit'
+                onClick={() =>
+                  openInNewTab(
+                    'https://www.mandela.ac.za/Study-at-Mandela/Discovery/Qualification-Details?appqual=RR&qual=40105&faculty=1400&ot=A1&cid=28'
+                  )
+                }
+              />
+              <Button text='View Record' onClick={() => openInNewTab(academicRecord)} />
             </>
           }
         >
           <ExpandableWrapperProvider showPadding>
-            <ExpandableSection
-              title='Home and Away'
-              description='House Sitting Flutter App'
-              round
-            >
+            <ExpandableSection title='Home and Away' description='House Sitting Flutter App' round>
               <C_p>
                 During my 3rd year project, I was tasked to work in a team of 3 where we needed to
                 design, implement and document a system utilising our learned skills. My team
@@ -64,11 +79,7 @@ const EducationPage: FC = () => {
                 for our relational database.
               </C_p>
             </ExpandableSection>
-            <ExpandableSection
-              title='Quirkle'
-              description='Android App with Java Server'
-              round
-            >
+            <ExpandableSection title='Quirkle' description='Android App with Java Server' round>
               <C_p>
                 My final semester project for advanced programming required me to create an{' '}
                 <C_p color='primary' span>

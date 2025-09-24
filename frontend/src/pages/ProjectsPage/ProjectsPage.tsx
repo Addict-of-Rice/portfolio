@@ -3,31 +3,41 @@ import Page from '../../components/Structure/Page';
 import ExpandableSection from '../../components/Structure/Sections/ExpandableSection';
 import { ExpandableWrapperProvider } from '../../components/Structure/Sections/ExpandableWrapper';
 import Button from '../../components/Button/Button';
+import { openInNewTab } from '../../utils/utils';
 
 const ProjectsPage: FC = () => {
   return (
     <Page>
-      <ExpandableWrapperProvider>
-        <ExpandableSection
+      <ExpandableWrapperProvider initialActiveTitle='npm'>
+        {/* <ExpandableSection
           title='Ever Young'
           description="The official website for my mother's fitness business."
           buttons={<Button text='Visit' onClick={() => {}} />}
-          children="remove me"
-        />
-        <ExpandableSection
-          title='npm'
-          description='Projects for Node Package Manager'
-        >
+          children='remove me'
+        /> */}
+        <ExpandableSection title='npm' description='Projects for Node Package Manager'>
           <ExpandableWrapperProvider showPadding>
             <ExpandableSection
               title='React useHandleState'
               description='Custom React Hook for using handleChange with complex objects.'
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button
+                  text='Visit'
+                  onClick={() => openInNewTab('https://www.npmjs.com/package/react-usehandlestate')}
+                />
+              }
             />
             <ExpandableSection
               title='React AlternatorWrapper'
               description="Custom wrapper component which allows a specific child's props to be overridden in order."
-              buttons={<Button text='Visit' onClick={() => {}} />}
+              buttons={
+                <Button
+                  text='Visit'
+                  onClick={() =>
+                    openInNewTab('https://github.com/Addict-of-Rice/react-alternator-wrapper')
+                  }
+                />
+              }
             />
           </ExpandableWrapperProvider>
         </ExpandableSection>

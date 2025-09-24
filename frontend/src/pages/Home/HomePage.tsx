@@ -2,11 +2,11 @@ import { type FC } from 'react';
 import HeroSection from './HeroSection';
 import TechStackSection from './TechStackSection';
 import AboutMeSection from './AboutMeSection';
-import AlternatorWrapper from '../../components/AlternatorWrapper/AlternatorWrapper';
 import { useNavigate } from 'react-router';
 import Page from '../../components/Structure/Page';
 import AlignSection from '../../components/Structure/Sections/AlignSection';
 import ContactsSection from './ContactsSection';
+import { AlternatorWrapper } from 'react-alternator-wrapper';
 
 const HomePage: FC = () => {
   const navigate = useNavigate();

@@ -48,11 +48,10 @@ const Terminal: FC = () => {
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      event.preventDefault();
-
       if (event.ctrlKey && event.key === '`') {
         setIsOpen((prev) => !prev);
       } else if (openRef.current) {
+        event.preventDefault();
         delayFlashing();
         if (event.ctrlKey && event.key.toLowerCase() === 'c') {
           shellRef.current!.exit();
